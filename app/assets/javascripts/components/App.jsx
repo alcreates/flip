@@ -4,6 +4,7 @@ class App extends React.Component {
          return (
              <div>
                  <NavBar/>
+                 <Body/>     
                  <Footer/>
              </div>
          ); 
