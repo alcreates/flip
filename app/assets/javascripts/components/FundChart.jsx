@@ -1,4 +1,11 @@
 class FundChart extends React.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            currentTemp: this.props.currentTemp       
+        }
+      
+    }
     componentDidMount () {
         let ctx = document.getElementById('myChart').getContext('2d');
         let chart = new Chart(ctx, {
@@ -12,7 +19,7 @@ class FundChart extends React.Component {
                     label: "My First dataset",
                     backgroundColor: 'rgb(255, 99, 132)',
                     borderColor: 'rgb(255, 99, 132)',
-                    data: [0, 10, 5, 2, 20, 30, 45],
+                    data: [200, 10, 5, 2, 20, 30, 45],
                 }]
             },
         

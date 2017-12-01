@@ -8,6 +8,6 @@ class AppController < ApplicationController
       )
    
    
-   puts response.body
+    @tempData = JSON.parse(response)["list"][0]["main"]
   end
 end
