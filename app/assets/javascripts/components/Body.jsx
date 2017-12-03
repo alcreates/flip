@@ -15,7 +15,7 @@ class Body extends React.Component {
         const self = this;
         this.getData();
         
-        setInterval(function(){ self.getData() }, 20000);
+       // setInterval(function(){ self.getData() }, 20000);
         
     }
     getData(){
@@ -46,6 +46,7 @@ class Body extends React.Component {
              <div style={bodyBG}>
                 <div className="container">               
                  <h2>Temperatures</h2>
+                 {moment.unix(1512341400).format('MMMM Do YYYY, h:mm:ss a') }
                  
                  <FundChart time={this.state.timeArr} temp ={this.state.tempArr} data = {this.state.data} /> 
                  <Report/>   

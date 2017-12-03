@@ -18,3 +18,4 @@
 //= require components
 //= require_tree .
 //= require Chart.min
+//= require moment
