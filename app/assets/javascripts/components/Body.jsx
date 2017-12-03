@@ -12,6 +12,11 @@ class Body extends React.Component {
         }
       
     }
+    componentDidMount() { 
+        $.getJSON('http://api.openweathermap.org/data/2.5/weather?zip=10001,us&APPID=97ba0137a822f0aa0167956e1aa88b78', (response) => {
+        console.log(response);     
+        this.setState({ currentTemp : response }) }); 
+    }
    
      render(){
          return (
