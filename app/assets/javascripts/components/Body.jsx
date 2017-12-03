@@ -12,18 +12,28 @@ class Body extends React.Component {
             timeArr: [],
             tempArr: []
         }
-
+        const self = this;
         this.getData();
-       
+        
+        setInterval(function(){ self.getData() }, 20000);
+        
     }
     getData(){
+        console.log("get data");
        
         $.getJSON('http://api.openweathermap.org/data/2.5/weather?zip=10001,us&APPID=97ba0137a822f0aa0167956e1aa88b78', (response) => {
+            let currentTimeArr = this.state.timeArr;
+            if( currentTimeArr.length > 10 ){
+                this.state.timeArr.shift();
+                this.state.tempArr.shift();
+            }    
+
             this.setState({
                 data : response,
                 timeArr: [...this.state.timeArr, response.dt],
                 tempArr: [...this.state.tempArr, response.main.temp]
             });
+
            
         });
     }
