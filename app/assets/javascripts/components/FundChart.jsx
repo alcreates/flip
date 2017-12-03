@@ -2,8 +2,10 @@ class FundChart extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            currentTemp: this.props.currentTemp       
+            labelsArr: this.props.time,
+            dataArr: this.props.temp      
         }
+      console.log(this.state.labelsArr);
       
     }
     componentDidMount () {
@@ -14,12 +16,12 @@ class FundChart extends React.Component {
         
             // The data for our dataset
             data: {
-                labels: ["January", "February", "March", "April", "May", "June", "July"],
+                labels: this.state.labelsArr,
                 datasets: [{
                     label: "My First dataset",
                     backgroundColor: 'rgb(255, 99, 132)',
                     borderColor: 'rgb(255, 99, 132)',
-                    data: [200, 10, 5, 2, 20, 30, 45],
+                    data: this.state.dataArr,
                 }]
             },
         
