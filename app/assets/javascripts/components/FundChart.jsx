@@ -1,3 +1,9 @@
+const chartBG = {
+   
+   
+}
+
+
 class FundChart extends React.Component {
     constructor(props){
         super(props);
@@ -30,7 +36,7 @@ class FundChart extends React.Component {
             data: {
                 labels: this.state.labelsArr,
                 datasets: [{
-                    label: "My First dataset",
+                    label: "Temperature",
                     backgroundColor: 'rgb(255, 99, 132)',
                     borderColor: 'rgb(255, 99, 132)',
                     data: this.state.dataArr
@@ -45,11 +51,12 @@ class FundChart extends React.Component {
     }
       render(){
           return (
-              <div>
+            <div className="col-12">
+                <canvas style={chartBG} id="myChart"></canvas>
+            </div>
                 
-                <canvas id="myChart"></canvas>
  
-              </div>
+             
           ); 
       }
       

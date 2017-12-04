@@ -1,7 +1,7 @@
 const footBG = {
     backgroundColor: '#2483B8',
     height: '60px',
-    position: 'absolute',
+    position: 'fixed',
     bottom: '0',
     width: '100%'
 }
