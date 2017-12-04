@@ -14,9 +14,9 @@ class Body extends React.Component {
             tempArr: []
         }
         const self = this;
-        this.getData();
+        // this.getData();
         
-         setInterval(function(){ self.getData() }, 20000);
+        //  setInterval(function(){ self.getData() }, 20000);
         
     }
     getData(){
